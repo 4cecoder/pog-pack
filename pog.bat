@@ -16,7 +16,7 @@ mkdir pog-projects
 cd pog-projects
 ECHO "Fetching the poggiest projects..."
 
-rm -rf "/usr/local/share/ani-cli" "/usr/local/bin/ani-cli" "/usr/local/bin/UI" /usr/local/bin/player_* #If some of these aren't found, it's not a problem
+rm -rf "/usr/local/share/ani-cli" "/usr/local/bin/ani-cli" "/usr/local/bin/UI" /usr/local/bin/player_*
 git clone "https://github.com/pystardust/ani-cli.git" && cd ./ani-cli
 cp ./ani-cli /usr/bin
 cd .. && rm -rf ./ani-cli
