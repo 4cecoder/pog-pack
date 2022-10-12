@@ -10,7 +10,7 @@ refreshenv
 choco feature enable -n=allowGlobalConfirmation
 
 ECHO "Pogging up WINDOWS! Please wait..."
-choco install git go rust python3 ffmpeg mpv make
+choco install git go rust python3 fzf ffmpeg mpv make
 
 mkdir pog-projects
 cd pog-projects
