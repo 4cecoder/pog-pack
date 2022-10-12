@@ -27,9 +27,9 @@ git clone https://github.com/justchokingaround/lobster && cd lobster
 cp lobster.sh /usr/bin/lobster && cd .. && rm -rf ./lobster
 
 git clone https://github.com/manga-g/manga-g
-cd ./manga-g/cmd/manga-g/
-go build && cp ./manga-g /usr/bin
-cd ../../../ && rm -rf manga-g
+cd ./manga-g/
+go build -o manga-g ./cmd/manga-g/main.go && cp ./manga-g /usr/bin
+cd .. && rm -rf manga-g
 
 git clone https://github.com/ayntgl/discordo
 cd ./discordo
