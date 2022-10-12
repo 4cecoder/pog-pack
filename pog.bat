@@ -21,7 +21,8 @@ git clone "https://github.com/pystardust/ani-cli.git" && cd ./ani-cli
 cp ./ani-cli /usr/bin
 cd .. && rm -rf ./ani-cli
 
-git clone https://github.com/mov-cli/mov-cli
+git clone https://github.com/justchokingaround/lobster && cd lobster
+cp lobster.sh /usr/bin/lobster && cd .. && rm -rf ./lobster
 
 git clone https://github.com/manga-g/manga-g
 cd ./manga-g/cmd/manga-g/
