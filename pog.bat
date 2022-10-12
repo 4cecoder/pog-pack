@@ -12,25 +12,25 @@ refreshenv
 choco feature enable -n=allowGlobalConfirmation
 
 ECHO "Pogging up WINDOWS! Please wait..."
-choco install git go rust python3 terminal fzf ffmpeg mpv make
+choco install git go rust python3 terminal gh fzf ffmpeg mpv make
 
 mkdir pog-projects
 cd pog-projects
 ECHO "Fetching the poggiest projects..."
 
 rm -rf "/usr/local/share/ani-cli" "/usr/local/bin/ani-cli" "/usr/local/bin/UI" /usr/local/bin/player_*
-git clone "https://github.com/pystardust/ani-cli.git" && cd ./ani-cli
+gh repo clone pystardust/ani-cli && cd ./ani-cli
 cp ./ani-cli /usr/bin
 cd .. && rm -rf ./ani-cli
 
 git clone https://github.com/justchokingaround/lobster && cd lobster
 cp lobster.sh /usr/bin/lobster && cd .. && rm -rf ./lobster
 
-git clone https://github.com/manga-g/manga-g
+gh repo clone manga-g/manga-g
 cd ./manga-g/
 go build -o manga-g ./cmd/manga-g/main.go && cp ./manga-g /usr/bin
 cd .. && rm -rf manga-g
 
-git clone https://github.com/ayntgl/discordo
+gh repo clone ayntgl/discordo
 cd ./discordo
 make build && cp ./discordo /usr/bin && cd .. && rm -rf ./discordo
