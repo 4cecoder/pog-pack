@@ -3,10 +3,12 @@ ECHO "Are we Pog Yet?"
 setlocal enableextensions
 md %1
 endlocal
-
+ECHO "Scoop..."
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm get.scoop.sh | iex
+ECHO "CHOCOLATE..."
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 refreshenv
-
 choco feature enable -n=allowGlobalConfirmation
 
 ECHO "Pogging up WINDOWS! Please wait..."
