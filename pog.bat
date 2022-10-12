@@ -23,7 +23,7 @@ gh repo clone pystardust/ani-cli && cd ./ani-cli
 cp ./ani-cli /usr/bin
 cd .. && rm -rf ./ani-cli
 
-git clone https://github.com/justchokingaround/lobster && cd lobster
+gh repo clone justchokingaround/lobster && cd lobster
 cp lobster.sh /usr/bin/lobster && cd .. && rm -rf ./lobster
 
 gh repo clone manga-g/manga-g
