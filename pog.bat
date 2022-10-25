@@ -1,18 +1,15 @@
-ECHO "Are we Pog Yet?"
 @echo off
 setlocal enableextensions
 md %1
 endlocal
+
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
-refreshenv
 choco feature enable -n=allowGlobalConfirmation
 
-ECHO "Pogging up WINDOWS! Please wait..."
 choco install git go rust python3 terminal gh fzf ffmpeg mpv make
 
 mkdir pog-projects
 cd pog-projects
-ECHO "Fetching the poggiest projects..."
 
 rm -rf "/usr/local/share/ani-cli" "/usr/local/bin/ani-cli" "/usr/local/bin/UI" /usr/local/bin/player_*
 gh repo clone pystardust/ani-cli && cd ./ani-cli
