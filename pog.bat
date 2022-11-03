@@ -19,11 +19,5 @@ cd .. && rm -rf ./ani-cli
 gh repo clone justchokingaround/lobster && cd lobster
 cp lobster.sh /usr/bin/lobster && cd .. && rm -rf ./lobster
 
-gh repo clone manga-g/manga-g
-cd ./manga-g/
-go build -o manga-g ./cmd/manga-g/main.go && cp ./manga-g /usr/bin
-cd .. && rm -rf manga-g
-
-gh repo clone ayntgl/discordo
-cd ./discordo
-make build && cp ./discordo /usr/bin && cd .. && rm -rf ./discordo
+go install github.com/manga-g/manga-g/cmd/manga-g@latest
+go install github.com/ayntgl/discordo@latest
